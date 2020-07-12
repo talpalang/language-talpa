@@ -1,0 +1,41 @@
+{
+    "name": "language-talpa",
+    "displayName": "Language Talpa",
+    "description": "Langauge support for Talpa",
+    "version": "0.0.0",
+    "engines": {
+        "atom": "*",
+        "node": "*",
+        "vscode": "^1.46.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/talpalang/language-talpa.git"
+    },
+    "bugs": {
+        "url": "https://github.com/talpalang/language-talpa/issues"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "talpa",
+            "aliases": ["Talpa", "talpa", "talpalang"],
+            "extensions": [".tp"],
+            "configuration": "./settings/language-talpa.json"
+        }],
+        "grammars": [{
+            "language": "talpa",
+            "scopeName": "source.talpa",
+            "path": "./grammars/talpa.json"
+        }],
+        "snippets": [
+            {
+              "language": "talpa",
+              "path": "./snippets/talpa.json"
+            }
+        ]
+    },
+    "license": "MIT"
+}

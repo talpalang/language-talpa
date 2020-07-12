@@ -1,0 +1,76 @@
+{
+	"name": "Talpa",
+	"scopeName": "source.talpa",
+	"fileTypes": [
+		"tp"
+	],
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.talpa",
+					"match": "\\b(if|else|loop|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.declaration.talpa",
+					"match": "\\b(fn|class|const|let|type)\\b"
+				},
+				{
+					"name": "keyword.operator.talpa",
+					"match": "\\b(and|or|true|false)\\b"
+				},
+				{
+					"name": "support.class.talpa",
+					"match": "\\b(string|int|bool|struct|enum)\\b"
+				},
+				{
+					"name": "keyword.operator.assignment.compound.talpa",
+					"match": "="
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "((//).*)$",
+					"name": "comment.line.double-slash.talpa"
+				},
+				{
+					"begin": "/\\*",
+					"end": "\\*/",
+					"name": "comment.block.talpa"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.talpa",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.talpa",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"match": "\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b",
+   				"name": "constant.numeric.talpa"
+				}
+			]
+		}
+	}
+}
