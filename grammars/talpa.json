@@ -20,7 +20,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.talpa",
-					"match": "\\b(if|else|loop|while|for|return)\\b"
+					"match": "\\b(if|else|match|loop|while|for|in|return)\\b"
 				},
 				{
 					"name": "keyword.declaration.talpa",
@@ -36,7 +36,7 @@
 				},
 				{
 					"name": "keyword.operator.assignment.compound.talpa",
-					"match": "="
+					"match": "\\b(=|+=|-=|*=|/=)\\b"
 				}
 			]
 		},
